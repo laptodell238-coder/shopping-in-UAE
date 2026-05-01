@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dubai Shop</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+
+<h1 id="shopname" class="coloor-change">
+    Dubai Shop
+</h1>
+<header>
+<nav>
+<a href="#">Home</a>
+<a href="about.html">About</a>
+<a href="#order">Order Now</a>
+</nav>
+<div class="admin-dot" onclick="adminLogin()">⋮</div>
+</header>
+
+
+<!-- Admin Panel -->
+<div class="admin-panel" id="adminPanel">
+<h2>Admin Panel</h2>
+<input id="pname" placeholder="Product Name">
+<input id="pprice" placeholder="Price with symbol">
+<input type="file" id="pimg">
+<textarea id="pdesc" placeholder="Product Description"></textarea>
+<button onclick="addProduct()">Add Product</button>
+<button onclick="closeAdmin()">Close Admin</button>
+<button onclick="showDeleteOptions()">Delete Product</button>
+</div>
+
+<!-- Delete Options Panel -->
+<div class="admin-panel" id="deletePanel" style="display:none;">
+<h2>Select Product to Delete</h2>
+<div id="deleteList"></div>
+<button onclick="closeDeletePanel()">Close</button>
+</div>
+
+<!-- Products Grid -->
+<div class="products" id="productsList"></div>
+
+<!-- Product Detail Modal -->
+<div class="modal" id="modal">
+<div class="modal-box">
+<button class="close-modal" onclick="closeModal()">×</button>
+<h2 id="mName"></h2>
+<div id="mImages"></div>
+<p id="mDesc"></p>
+<h3 id="mPrice"></h3>
+<a id="waLink" target="_blank"><button>Order on WhatsApp</button></a>
+</div>
+</div>
+
+<footer>
+<p>Location: Dubai – All Arabic Countries</p>
+<p>WhatsApp: +923059441174</p>
+<p>&copy; 2026 Dubai Shop</p>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
